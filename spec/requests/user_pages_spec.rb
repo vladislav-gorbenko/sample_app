@@ -12,6 +12,12 @@ describe "User pages" do
     it { should have_selector('title', text: user.name) }
   end
 
+  describe "microposts" do
+      it { should have_content(m1.content) }
+      it { should have_content(m2.content) }
+      it { should have_content(user.microposts.count) }
+    end
+
 
   describe "edit" do
     let(:user) { FactoryGirl.create(:user) }
