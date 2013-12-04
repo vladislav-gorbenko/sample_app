@@ -174,7 +174,7 @@ describe User do
       @user.destroy
       microposts.should_not be_empty
       microposts.each do |micropost|
-        Micropost.find_by_id(micropost.id).should be_nil
+         Micropost.where(id: microposts.map(&:id)).should == []
       end
     end
 

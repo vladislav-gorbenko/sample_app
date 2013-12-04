@@ -37,6 +37,8 @@ group :test do
   gem 'guard-spork', :github => 'guard/guard-spork'
   gem 'spork', '0.9.2'
   gem 'factory_girl_rails', '4.1.0'
+  gem 'simplecov', :require => false
+  gem 'simplecov-rcov', :require => false
 end
 
 group :production do
